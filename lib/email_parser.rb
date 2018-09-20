@@ -14,14 +14,8 @@ class EmailParser
 
   def parse
     @email_array = Array.new
-
-
-
-    #@emails.scan(/\w+ \w+/)
-
-    #binding.pry
-
-    @emails.split(",")
+    @emails.gsub(//, ",")
+    @email_array = @emails.split(",")
 
 
 
